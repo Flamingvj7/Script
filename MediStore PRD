@@ -1,0 +1,232 @@
+📄 PRODUCT REQUIREMENTS DOCUMENT (PRD)
+🧩 1. Product Overview
+Product Name
+Online Medicine Ordering Platform (Truemeds-like)
+Objective
+Build a web-based platform that allows users to:
+Search and order medicines online
+Upload prescriptions
+Get affordable medicine alternatives
+Place and track orders
+Manage user accounts securely
+Target Users
+Patients buying medicines online
+Caretakers ordering for family
+Admins managing products, orders, and prescriptions
+
+🎯 2. Goals & Success Metrics
+Goals
+Easy medicine search & ordering
+Prescription-based medicine fulfillment
+Cost savings via substitute medicines
+Smooth checkout and delivery experience
+Success Metrics
+User registration count
+Orders placed per day
+Prescription uploads
+Conversion rate (visit → order)
+
+🧑‍💻 3. User Roles
+1️⃣ Guest User
+Browse medicines
+Search products
+View prices
+Register / Login
+
+2️⃣ Registered User
+Upload prescription
+Add medicines to cart
+Place orders
+Track order status
+View order history
+
+3️⃣ Admin
+Manage products & categories
+View & approve prescriptions
+Manage orders
+Update order status
+Manage users
+
+🖥️ 4. Tech Stack (Confirmed)
+Frontend
+HTML5
+CSS3
+JavaScript
+Bootstrap 5
+Backend
+Django (Python)
+Django ORM
+Database
+MySQL
+Other
+Django Authentication
+Django Admin Panel
+Media file handling for prescriptions
+
+🗺️ 5. Site Map / Pages
+Public Pages
+Home
+Product Listing
+Product Details
+Login
+Register
+Upload Prescription
+About / Contact
+User Pages
+User Dashboard
+Cart
+Checkout
+Order History
+Order Tracking
+Profile
+Admin Pages
+Admin Dashboard
+Product Management
+Category Management
+Prescription Review
+Order Management
+User Management
+
+🧩 6. Core Features & Requirements
+🔍 6.1 Product Catalog
+Description
+Users can browse medicines by category or search by name.
+Functional Requirements
+List medicines with:
+Name
+Brand
+Price
+Discount
+Prescription Required (Yes/No)
+Category-wise listing
+Search bar with keyword matching
+Backend
+Django Model: Product, Category
+MySQL tables for products & categories
+
+💊 6.2 Product Details Page
+Description
+Displays detailed information about a medicine.
+Functional Requirements
+Product image
+Description
+Dosage info
+Price & discount
+“Add to Cart” button
+Show substitute medicines (optional v2)
+
+🛒 6.3 Cart Management
+Description
+Users can add medicines to a cart before checkout.
+Functional Requirements
+Add/remove items
+Update quantity
+Price calculation
+Persist cart for logged-in users
+Backend
+Django session or Cart model
+
+📄 6.4 Prescription Upload
+Description
+Required for prescription-based medicines.
+Functional Requirements
+Upload image or PDF
+Validate file type
+Store securely
+Admin approval workflow
+Backend
+Django FileField
+Media storage
+Prescription status: Pending / Approved / Rejected
+
+💳 6.5 Checkout & Orders
+Description
+Allows users to place orders.
+Functional Requirements
+Address form
+Payment method selection (COD / Online placeholder)
+Order summary
+Order confirmation
+Backend
+Models: Order, OrderItem
+Order statuses:
+Placed
+Confirmed
+Shipped
+Delivered
+Cancelled
+
+👤 6.6 User Authentication
+Description
+Secure login & registration.
+Functional Requirements
+Register using email & password
+Login / logout
+Password hashing
+Session management
+Backend
+Django Auth system
+
+🧑‍⚕️ 6.7 Admin Panel
+Description
+Admins manage platform operations.
+Functional Requirements
+Add/edit/delete products
+Manage categories
+View prescriptions
+Update order status
+View users
+Backend
+Django Admin (customized)
+
+🗄️ 7. Database Design (High Level)
+Key Tables
+User
+Product
+Category
+Cart
+Order
+OrderItem
+Prescription
+Address
+Relationships
+User → Orders (1-Many)
+Order → OrderItems (1-Many)
+Product → Category (Many-1)
+
+🔐 8. Security & Compliance
+Password hashing
+CSRF protection
+Input validation
+Secure file upload
+HTTPS recommended
+Data privacy policy page
+
+🚀 9. Deployment Plan
+Local Development
+Django development server
+MySQL local DB
+Production
+Linux VPS / Cloud
+Gunicorn + Nginx
+Static & media file configuration
+
+🧪 10. Testing
+Test Types
+Unit tests (models & views)
+Form validation tests
+User flow testing
+Admin functionality testing
+
+📆 11. Future Enhancements (Phase 2)
+Online payment gateway
+Medicine substitute suggestions
+Order tracking via SMS/email
+Mobile app
+Doctor consultation
+
+✅ 12. Out of Scope (Initial Version)
+Mobile app
+AI recommendations
+Real-time delivery tracking
+Multi-vendor support
