@@ -230,3 +230,286 @@ Mobile app
 AI recommendations
 Real-time delivery tracking
 Multi-vendor support
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 PRODUCT REQUIREMENTS DOCUMENT (PRD)
+Medical Store Web Application
+🧠 1. Product Overview
+Vision
+
+Build an online pharmacy platform where users can:
+
+Browse medicine products
+
+Upload prescriptions
+
+Add to cart and checkout
+
+Place orders
+
+Admin manages inventory and orders
+
+This system will follow the design and structure pattern of your DoctorAppointment repository.
+
+🧑‍💻 2. User Roles
+Role	Capabilities
+Guest User	Browse products, view details, register
+Registered User	Order medicines, upload prescriptions, view orders
+Admin	Manage products, orders, users, prescriptions
+🗺️ 3. Features & User Stories
+🧾 3.1 Authentication
+
+Description: Users must register and login to place orders.
+
+User Stories:
+
+As a user, I want to register using email + password.
+
+As a user, I want to login/logout securely.
+
+Requirements:
+
+Django Auth integration
+
+User detail validation
+
+Bootstrap-based forms
+
+💊 3.2 Product Catalog
+
+Description: Users can view and browse medicine listings.
+
+User Stories:
+
+As a user I want to view all products.
+
+As a user I want to search products by name.
+
+Requirements:
+
+Product list page
+
+Search bar (JS + backend filtering)
+
+Medicine details page
+
+🛒 3.3 Cart Management
+
+Description: Users can add products to a cart before checkout.
+
+User Stories:
+
+As a user I want to add medicine to cart.
+
+As a user I want to view cart total and update quantities.
+
+Requirements:
+
+Cart view page
+
+Update & remove items
+
+Persist cart in session or DB
+
+📄 3.4 Prescription Upload
+
+Description: Some products require prescription upload.
+
+User Stories:
+
+As a user I want to upload prescription.
+
+As admin I want to review and approve prescriptions.
+
+Requirements:
+
+Prescription upload form
+
+File type validation
+
+Admin approval workflow
+
+💳 3.5 Checkout & Orders
+
+Description: Users will place orders from the cart.
+
+User Stories:
+
+As a user I want to enter delivery address.
+
+As a user I want to see order confirmation.
+
+Requirements:
+
+Address form in checkout
+
+Order items stored in DB
+
+Order confirmation page
+
+🧑‍💼 3.6 Admin Dashboard
+
+Description: Admin manages products, orders, users.
+
+User Stories:
+
+As admin I want to add/edit/delete products.
+
+As admin I want to update order status.
+
+Requirements:
+
+Admin views for products
+
+Order status change UI
+
+Prescription management
+
+🧱 4. System Architecture
+🏗️ Django Structure
+medicalstore/
+├── medicalstore/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── accounts/
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+├── products/
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+├── cart/
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+├── orders/
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+├── prescriptions/
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+├── templates/
+│   └── *.html
+└── static/
+    ├── css/
+    └── js/
+🗃️ 5. Database Design
+Table	Key Fields
+User	id, name, email, password
+Product	id, name, price, brand, image, prescription_required
+CartItem	id, user, product, quantity
+Order	id, user, address, total_amount, status
+OrderItem	id, order, product, quantity
+Prescription	id, user, file, status
+🎨 6. UI / UX Requirements
+Layout
+
+Use Bootstrap 5 grid system and components.
+
+Navigation
+
+Home
+
+Products
+
+Cart
+
+Orders
+
+Upload Prescription
+
+Login / Register
+
+Pages
+Page	Description
+Home	Product categories
+Product List	All medicines
+Product Detail	Single product
+Cart	Add/remove items
+Checkout	Capture order
+Prescription	Upload file
+User Orders	List user orders
+Admin Dashboard	Manage store
+🔍 7. Functional Requirements
+Authentication
+
+Password hashing
+
+Session login
+
+Form validation (JS + server)
+
+Product Search
+
+Frontend search bar
+
+Backend query filter
+
+Cart
+
+Add to cart
+
+Remove from cart
+
+Quantity update
+
+Prescription
+
+File upload form
+
+Save with reference to user
+
+Status Pending / Approved / Rejected
+
+Orders
+
+Quantity calculation
+
+Order status (Placed, Shipped, Delivered)
+
+🔐 8. Security Requirements
+
+✔ CSRF Protection (Django default)
+✔ Input validation
+✔ File upload validation
+✔ Strong password hashing
+✔ HTTPS recommended
+
+🧪 9. Testing
+Area	Tests
+Authentication	Login/ register flow
+Product Search	Search backend
+Cart	Add/remove/update
+Checkout	Total, validation
+Prescription	Upload / approve
+Admin Control	CRUD products
+🚀 10. Deployment Plan
+Dev Environment
+
+Local Django + MySQL
+
+Production
+
+Host on AWS / DigitalOcean / Railway
+
+Manage static and media files
+
+Build with nginx + gunicorn
+
+📦 11. Future Enhancements (Phase 2)
+
+✔ Online payments integration (Razorpay)
+✔ Medicine substitute suggestions
+✔ SMS / email notifications
+✔ User profile
+
+🧩 12. Assumptions
+
+✔ Users require accounts to order
+✔ Prescriptions stored securely
+✔ Product prices updated by admin
