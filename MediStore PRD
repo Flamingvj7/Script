@@ -513,3 +513,182 @@ Build with nginx + gunicorn
 ✔ Users require accounts to order
 ✔ Prescriptions stored securely
 ✔ Product prices updated by admin
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ HOW TO USE THESE COMMANDS (IMPORTANT)
+
+Use this format when talking to AI 👇
+(works best with ChatGPT Free + Codeium)
+
+Generate a complete responsive HTML page using Bootstrap 5.
+Use clean UI suitable for an online medical store.
+Include comments in code.
+
+Then paste the page-specific command below.
+
+🧭 GLOBAL FRONTEND RULE (ADD TO EVERY PROMPT)
+
+👉 Always add this at the top of every prompt
+
+Use:
+- HTML5
+- Bootstrap 5 CDN
+- Custom CSS inside <style>
+- Vanilla JavaScript only
+- Mobile-first responsive layout
+- Medical / pharmacy theme
+🏠 1. HOME PAGE (home.html)
+Create a Home page for an Online Medicine Ordering Platform.
+
+Sections required:
+- Top navbar with logo, search bar, login/register buttons
+- Hero section with headline: "Order Medicines Online at Best Prices"
+- Category cards (Tablets, Syrups, Devices, Supplements)
+- Popular medicines grid (image, name, price, add to cart)
+- Prescription upload call-to-action
+- Footer with About, Contact, Privacy Policy links
+
+Use Bootstrap cards and grid.
+🔍 2. PRODUCT LISTING PAGE (products.html)
+Create a Product Listing page for medicines.
+
+Requirements:
+- Sidebar filters (Category, Prescription Required)
+- Search bar at top
+- Product cards with:
+  - Image
+  - Medicine name
+  - Brand
+  - Price
+  - Discount badge
+  - "View Details" button
+- Responsive grid layout
+
+Use Bootstrap grid and badges.
+💊 3. PRODUCT DETAILS PAGE (product_detail.html)
+Create a Product Details page for a medicine.
+
+Include:
+- Product image gallery
+- Medicine name and brand
+- Description and dosage information
+- Price and discount
+- Prescription required indicator
+- Quantity selector
+- Add to Cart button
+- Suggested substitute medicines section
+
+Use Bootstrap layout and buttons.
+🛒 4. CART PAGE (cart.html)
+Create a Cart page for an online pharmacy.
+
+Include:
+- Table with medicine name, price, quantity selector, subtotal
+- Remove item button
+- Cart total summary
+- Continue shopping button
+- Proceed to checkout button
+
+Use Bootstrap table and responsive layout.
+💳 5. CHECKOUT PAGE (checkout.html)
+Create a Checkout page.
+
+Include:
+- Delivery address form
+- Order summary card
+- Payment method selection (COD / Online - disabled)
+- Place Order button
+
+Use Bootstrap forms and cards.
+📄 6. PRESCRIPTION UPLOAD PAGE (upload_prescription.html)
+Create a Prescription Upload page.
+
+Include:
+- File upload input (image/pdf)
+- Instructions for uploading prescription
+- Submit button
+- Status indicator (Pending / Approved / Rejected UI)
+
+Use Bootstrap form validation styles.
+👤 7. LOGIN PAGE (login.html)
+Create a Login page.
+
+Include:
+- Email field
+- Password field
+- Login button
+- Link to Register page
+- Clean medical-themed UI
+
+Use Bootstrap form components.
+📝 8. REGISTER PAGE (register.html)
+Create a Register page.
+
+Include:
+- Name
+- Email
+- Password
+- Confirm password
+- Register button
+- Login redirect link
+
+Use Bootstrap validation styles.
+📦 9. USER DASHBOARD (dashboard.html)
+Create a User Dashboard page.
+
+Include:
+- Sidebar navigation (Orders, Profile, Upload Prescription, Logout)
+- Welcome message
+- Quick stats (Total Orders, Pending Orders)
+- Recent orders table
+
+Use Bootstrap cards and layout.
+📜 10. ORDER HISTORY PAGE (orders.html)
+Create an Order History page.
+
+Include:
+- Orders table with:
+  - Order ID
+  - Date
+  - Total Amount
+  - Status badge
+  - View details button
+
+Use Bootstrap tables and badges.
+🚚 11. ORDER TRACKING PAGE (track_order.html)
+Create an Order Tracking page.
+
+Include:
+- Order ID search
+- Order progress steps:
+  - Placed
+  - Confirmed
+  - Shipped
+  - Delivered
+
+Use Bootstrap progress or step indicators.
+⚙️ 12. ADMIN DASHBOARD (admin_dashboard.html)
+Create an Admin Dashboard page.
+
+Include:
+- Sidebar navigation
+- Summary cards (Total Orders, Products, Users)
+- Recent orders table
+- Pending prescription approvals section
+
+Use Bootstrap admin-style UI.
+🧪 BONUS: MASTER PROMPT (GENERATE ALL PAGES)
+
+If an AI supports long output, use this 👇
+
+Generate frontend HTML pages using Bootstrap 5 for an Online Medicine Ordering Platform:
+Home, Product Listing, Product Details, Cart, Checkout, Prescription Upload,
+Login, Register, User Dashboard, Order History, Order Tracking, Admin Dashboard.
+
+Each page must be responsive, clean, medical-themed, and well commented.
+🏆 FINAL TIP (VERY IMPORTANT)
+
+✔ Generate ONE PAGE AT A TIME
+✔ Save as separate .html files
+✔ Later connect them to Django templates
